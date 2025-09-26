@@ -9,7 +9,7 @@ export function merge(
   return mergeTwoArray(mergedCol1_2, col3)
 }
 
-function reverseArray(arr: number[]): number[] {
+export function reverseArray(arr: number[]): number[] {
   let result: number[] = []
   for (let i = arr.length - 1; i >= 0; i--) {
     result.push(arr[i]!)
@@ -17,7 +17,7 @@ function reverseArray(arr: number[]): number[] {
   return result
 }
 
-function mergeTwoArray(arr1: number[], arr2: number[]): number[] {
+export function mergeTwoArray(arr1: number[], arr2: number[]): number[] {
   let result: number[] = []
   let i: number = 0
   let j: number = 0
@@ -35,9 +35,3 @@ function mergeTwoArray(arr1: number[], arr2: number[]): number[] {
   while (j < arr2.length) result.push(arr2[j++]!)
   return result
 }
-
-const descendingArr: number[] = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-console.log(reverseArray(descendingArr))
-const col2: number[] = [0, 1, 2, 3, 4]
-const col3: number[] = [1, 2, 3, 4, 5]
-console.log(mergeTwoArray(col2, col3))
